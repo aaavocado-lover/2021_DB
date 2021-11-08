@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework</title>
+        <meta charset ="UTF-8" />
+    </head>
+
+    <body>
+        <h1>Random Number Game</h1>
+        <div>
+            <h3 class="js-title">
+                Generate a number between 0 and 120
+            </h3>
+        
+            <datalist id="number">
+                <option value ="50"></option>
+                <option value ="100"></option>
+            </datalist>
+
+            <input list="number" id="js-range" type="range"
+                min="0" max="120" value="5" step="5" />
+        </div>
+
+        <form id="js-guess">
+            <label>Guess the number:</label>
+            <input type="number" id="myNumber" max="120" min="0" />
+            <input type="submit" value="Play!">
+        </form>
+
+        <div id="js-result">
+            <span></span>
+        </div>
+
+        <script src ="test.js"></script>
+    </body>
+</html> 
