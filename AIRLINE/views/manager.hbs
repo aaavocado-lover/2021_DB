@@ -1,0 +1,54 @@
+<h1>{{ 관리자 페이지 }}</h1>
+<table>
+    <tr>
+        <td>Airport_code</td>
+        <td>Name</td>
+        <td>City</td>
+        <td>State</td>
+    </tr>
+
+    {{#each Airport}}
+        <form method="post">
+            <tr>
+                <td>{{Airport_code}}</td>
+                <td>{{Name}}</td>
+                <td>{{City}}</td>
+                <td>{{State}}</td>
+                <td style="border: none; margin-left: 10px;">
+                    <button
+                        style="margin-left: 10px;"
+                        type="submit"
+                        name="delBtn"
+                        value={{Airport_code}}
+                        formaction="/airport_delete">
+                        삭제
+                    </button>
+                </td>
+            </tr>
+        </form>
+    {{/each}}
+</table>
+
+<table>
+    <tr>
+        <td>Airplane_id</td>
+        <td>Total_number_of_seats</td>
+        <td>Airplane_type</td>
+    </tr>
+
+    {{#each Airplane}}
+
+    {{/each}}
+</table>
+
+<table>
+    <tr>
+        <td>Flight_number</td>
+        <td>Airline</td>
+        <td>Weekdays</td>
+    </tr>
+
+    {{#each Flight}}
+
+    {{/each}}
+</table>

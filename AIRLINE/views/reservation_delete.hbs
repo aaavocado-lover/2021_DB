@@ -1,0 +1,30 @@
+<h1>{{ Reservation 삭제 }}</h1>
+<table>
+    <tr>
+        <td>Date</td>
+        <td>Seat_number</td>
+        <td>Customer_name</td>
+        <td>Customer_phone</td>
+    </tr>
+
+    {{#each Reservation}}
+        <form method="post">
+            <tr>
+                <td>{{Date}}</td>
+                <td>{{Seat_number}}</td>
+                <td>{{Customer_name}}</td>
+                <td>{{Customer_phone}}</td>
+                <td style="border: none; margin-left: 10px;">
+                    <button
+                        style="margin-left: 10px;"
+                        type="submit"
+                        name="delBtn"
+                        value={{Seat_number}}
+                        formaction='/reservation_delete'>
+                        삭제
+                        </button>
+                </td>
+            </tr>
+        </form>
+    {{/each}}
+</table>
